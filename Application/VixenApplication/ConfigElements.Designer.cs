@@ -460,8 +460,10 @@
 			// 
 			// ConfigElements
 			// 
+			this.AcceptButton = this.buttonOk;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.buttonCancel;
 			this.ClientSize = new System.Drawing.Size(534, 512);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -471,10 +473,12 @@
 			this.Controls.Add(this.groupBoxOperations);
 			this.Controls.Add(this.groupBoxSelectedNode);
 			this.DoubleBuffered = true;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(550, 550);
 			this.Name = "ConfigElements";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Display Elements & Group Configuration";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigElements_FormClosing);
 			this.Load += new System.EventHandler(this.ConfigElements_Load);
 			this.groupBoxSelectedNode.ResumeLayout(false);
 			this.groupBoxSelectedNode.PerformLayout();
